@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P,R,S - Game</title>
+  <link rel="stylesheet" href="styles/style.css">
+ </head>
+
+<body>
+  <% include global/header %>
+
+  <div id="feedback">
+  </div>
+  <div id="throw_choice" class="hidden">
+    <h2 id = "throw_choice_header">Choose your hand, <%=user.name%></h2>
+    <form action="<%=user.name%>/results" method="get">
+      Temporary text:<br>
+      <select name="weapon">
+        <option value=" "> </option>
+        <option value="paper">Paper</option>
+        <option value="rock">Rock</option>
+        <option value="scissors">Scissors</option>
+      </select><br>
+      <button type = "submit" id="throw_choice_button">Throw!</button>
+    </form>
+  </div>
+
+  <div id="game_results" class="hidden">
+    <h2> Game Results</h2>
+    <table>
+      <tr>
+        <td>
+          <nobr id = "player_game_results"> </nobr>
+        </td>
+        <td>
+          <nobr id = "general_game_results"> </nobr>
+        </td>
+        <td>
+          <nobr id = "browser_game_results"> </nobr>
+        </td>
+      </tr>
+      <tr>
+        <td class=throw_table>
+          <img id = "player_image" src = ""></img>
+        </td>
+        <td class=throw_table>
+          <button id = "reset">Play Again</button>
+        </td>
+        <td class=throw_table>
+          <img id = "browser_image" src = ""></img>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="buttons" class="hidden">
+    <button id = "show_rules_button">Rules</button>
+    <button id = "show_stats_button">Stats</button>
+    <button id = "log_out_button">Log Out</button>
+  </div>
+  
+  <footer>
+    Brought to you by the cool kids of Software Engineering - Fall, 2018.
+  </footer>
+  <script src="scripts/scripts.js"></script>
+ </body>
+</html>
